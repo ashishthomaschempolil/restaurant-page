@@ -1,15 +1,24 @@
 :root {
     --black: #171717;
     --white: #fafafa;
+    --dark-white: #d4d4d4;
 }
 
 /* Path: src/styles.css */
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
     color: var(--black); /* font color */
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* Resize the image to be full 100% */
+    background: url(./assets/bg.jpg) no-repeat center center fixed;
+    background-size: 100%;
 }
 
 #header {
@@ -26,5 +35,24 @@ body {
 
 .btn {
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: .5rem 1rem;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main h1 {
+    color: var(--white);
+    font-size: 3rem;
+    position: relative;
+    top: -5rem;
+    background-color: var(--black);
+    opacity: 1;
+    padding: 2rem 2rem;
+    border-radius: 0.5rem;
+    text-shadow: 0 0 0.2rem var(--dark-white);
 }

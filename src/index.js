@@ -8,11 +8,17 @@ header.createAndAppendHTML('div', 'Menu', 'btn', 'menu')
 header.createAndAppendHTML('div', 'Contact', 'btn', 'contact')
 header.createAndAppendHTML('div', 'About', 'btn', 'about')
 
-const main = new ElementManipulator('main')
-main.createAndAppendHTML('h1', 'Welcome to Casa Burgers')
-
 content.appendChild(header.elementCurrent)
-content.appendChild(main.elementCurrent)
 
-console.log(content.elementCurrent)
-console.log(content.elementCurrent.innerHTML)
+const home = (() => {
+  const main = new ElementManipulator('main')
+  main.createAndAppendHTML('h1', 'Welcome to Brigg\'s Burgers')
+
+  content.appendChild(main.elementCurrent)
+})()
+
+const menu = () => {
+
+}
+
+home
