@@ -17,8 +17,6 @@ body {
     flex-direction: column;
     height: 100vh;
     /* Resize the image to be full 100% */
-    background: url(./assets/bg.jpg) no-repeat center center fixed;
-    background-size: 100%;
 }
 
 #header {
@@ -42,10 +40,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    background: url(assets/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
-#main h1 {
+#main .home-title {
     color: var(--white);
     font-size: 3rem;
     position: relative;
@@ -56,3 +56,37 @@ body {
     border-radius: 0.5rem;
     text-shadow: 0 0 0.2rem var(--dark-white);
 }
+
+#bg-menu {
+    background-color: var(--white);
+    opacity: .95;
+    padding: 1rem;
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    box-shadow: 0 0 0.2rem var(--dark-white);
+    margin: 1rem;
+    width: 100%;
+    max-width: 250px;
+}
+
+.menu-card img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 0.5rem;
+}
+
+/* .menu-card  */
