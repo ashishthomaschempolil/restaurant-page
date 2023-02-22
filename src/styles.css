@@ -58,14 +58,14 @@ body {
 }
 
 #bg-menu {
-    background-color: var(--white);
-    opacity: .95;
+    background-color: var(--black);
     padding: 1rem;
     width: 80%;
     height: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1rem;
+    border-radius: 0.5rem;
 }
 
 .menu-card {
@@ -76,8 +76,8 @@ body {
     text-align: center;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: var(--white);
-    box-shadow: 0 0 0.2rem var(--dark-white);
+    background-color: var(--black);
+    color: var(--white);
     margin: 1rem;
     width: 100%;
     max-width: 250px;
@@ -89,4 +89,27 @@ body {
     border-radius: 0.5rem;
 }
 
-/* .menu-card  */
+.menu-card p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* about */
+#about-content {
+    background-color: var(--black);
+    color: var(--white);
+    width: 80%;
+    padding: 2rem;
+}
+
+#about-content h1 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+
+#about-content p {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+}

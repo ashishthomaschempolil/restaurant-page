@@ -9,7 +9,7 @@ const content = new ElementManipulator('content')
 const header = new ElementManipulator('header')
 header.createAndAppendHTML('div', 'Home', 'btn', 'home')
 header.createAndAppendHTML('div', 'Menu', 'btn', 'menu')
-header.createAndAppendHTML('div', 'Contact', 'btn', 'contact')
+// header.createAndAppendHTML('div', 'Contact', 'btn', 'contact')
 header.createAndAppendHTML('div', 'About', 'btn', 'about')
 
 content.appendChild(header.elementCurrent)
@@ -61,17 +61,26 @@ const menu = () => {
   bgMenu.appendChild(loadedFries.card)
 
   main.appendChild(bgMenu.elementCurrent)
-
-  console.log(bgMenu.elementCurrent)
-  console.log(main.elementCurrent)
   content.appendChild(main.elementCurrent)
-  console.log(content.elementCurrent)
 }
 
+const about = () => {
+  const main = new ElementManipulator('main')
+  const about = new ElementManipulator('about-content')
+  about.createAndAppendHTML('h1', 'About Us', 'about-title')
+
+  // create about text
+  const text = "At Brigg's Burgers, we believe that great food starts with great ingredients.<br><br>That's why we use only the freshest, highest-quality ingredients in all of our burgers, from the juicy beef patties to the crisp lettuce and ripe tomatoes.<br><br>Our burgers are handcrafted and made to order, so you can be sure that each one is cooked to perfection and packed with flavor. Whether you prefer a classic cheeseburger, a spicy jalapeno burger, or a veggie burger, we have something for everyone.<br><br>But we're more than just burgers. Our menu also features a range of delicious sides, such as crispy fries, onion rings, and sweet potato tots. And if you're looking for something sweet, we've got you covered with our mouth-watering milkshakes and desserts.<br><br>At Brigg's Burgers, we're committed to providing our customers with a memorable dining experience. Our friendly staff and cozy atmosphere will make you feel right at home. So come on in, grab a seat, and enjoy a delicious burger today!"
+  const abtText = document.createElement('p')
+  abtText.innerHTML = text
+
+  about.appendChild(abtText)
+  main.appendChild(about.elementCurrent)
+
+  content.appendChild(main.elementCurrent)
+}
 
 home()
-console.log(content.elementCurrent)
-
 
 const btns = document.querySelectorAll('.btn')
 btns.forEach(btn => {
@@ -83,6 +92,8 @@ btns.forEach(btn => {
       home()
     } else if (btnId === 'menu') {
       menu()
+    } else if (btnId === 'about') {
+      about()
     }
   })
 }
